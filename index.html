@@ -104,13 +104,22 @@
           <p>Phone: <a href="tel:+353860788739">086 078 8739</a></p>
           <p>Areas: Carrigtwohill • Midleton • Youghal • Dungarvan • East Cork</p>
         </div>
-        <form class="contact-form" action="https://formspree.io/f/xyyylabo" method="POST">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="_replyto" placeholder="Your email" required>
-          <textarea name="message" rows="4" placeholder="How can I help?" required></textarea>
-          <button class="btn btn-primary" type="submit">Send message</button>
-          <p class="form-note">Alternatively, email <a href="mailto:info@dtechsupport.ie">info@dtechsupport.ie</a></p>
-        </form>
+        <form class="contact-form" action="https://formsubmit.co/info@dtechsupport.ie" method="POST">
+  <input type="text" name="name" placeholder="Your name" required>
+  <input type="email" name="email" placeholder="Your email" required>
+  <textarea name="message" rows="4" placeholder="How can I help?" required></textarea>
+
+  <!-- optional hidden settings -->
+  <input type="hidden" name="_subject" value="Website enquiry — DTech Support">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <!-- Optional: redirect after sending -->
+  <!-- <input type="hidden" name="_next" value="https://dtechsupport.ie/#thanks"> -->
+
+  <button class="btn btn-primary" type="submit">Send message</button>
+  <p class="form-note">Alternatively, email <a href="mailto:info@dtechsupport.ie">info@dtechsupport.ie</a></p>
+</form>
+
       </div>
     </div>
   </section>
