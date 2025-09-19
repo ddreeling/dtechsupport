@@ -28,16 +28,11 @@ body{
 .top-actions .btn{margin-left:8px}
 
 .hero{
-  background:linear-gradient( to right, rgba(10,31,68,.9), rgba(10,31,68,.55) ), var(--bg);
-  background-image:linear-gradient( to right, rgba(10,31,68,.9), rgba(10,31,68,.55) ), var(--bg), var(--bg);
+  background:#0A1F44;     /* solid brand navy */
   color:#fff;
+  position:relative;
 }
-.hero{position:relative}
-.hero::before{
-  content:""; position:absolute; inset:0;
-  background-image:var(--bg);
-  background-size:cover; background-position:center; opacity:.1;
-}
+.hero::before{ display:none; }   /* or delete this rule entirely */
 .hero .hero-inner{position:relative;padding:72px 0}
 .hero h2{font-size:34px;line-height:1.2;margin:0 0 10px}
 .hero p{max-width:700px; color:#e5e7eb}
