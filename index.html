@@ -3,108 +3,359 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DTech Support — Local IT & Cyber Help for Homes and SMEs throughout County Cork</title>
-  <meta name="description" content="Wi‑Fi fixes, PC tune‑ups, antivirus/MFA, backups, Microsoft 365/Google Workspace, and small‑business support. No ladders. Fast local help in Carrigtwohill, Midleton, Youghal & East Cork." />
+
+  <title>DTech Support — Home Wi-Fi, IT & Cyber Help in Cork</title>
+  <meta name="description" content="Professional home Wi-Fi optimisation, PC tune-ups, security setup, backups, email help and small business IT support across Cork City and County." />
+
   <link rel="icon" href="assets/favicon.svg" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="DTech Support — IT & Cyber Help for Home + Business" />
-  <meta property="og:description" content="Quick fixes that make money for you today: Wi‑Fi, PC speed, security, email, backups. Book a local call‑out or remote session." />
+
+  <meta property="og:title" content="DTech Support — Home Wi-Fi, IT & Cyber Help in Cork" />
+  <meta property="og:description" content="Bad Wi-Fi upstairs? Buffering TV? Dropped Zoom calls? Professional Wi-Fi diagnostics and IT support across Cork." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/cover.jpg" />
   <meta property="og:url" content="https://dtechsupport.ie/" />
 
-  <!-- Google Analytics (kept from your version) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4HJ0YGCPW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-V4HJ0YGCPW');
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V4HJ0YGCPW');
   </script>
 
   <style>
-    /* DTech Support — minimal, clean, responsive (single-file build) */
     :root{
-      --navy:#0A1F44; --teal:#1ABC9C; --ink:#1b1f23; --muted:#6b7280; --bg:#f7f8fb; --card:#ffffff; --ring: rgba(26,188,156,.35);
+      --navy:#0A1F44;
+      --teal:#1ABC9C;
+      --ink:#1b1f23;
+      --muted:#6b7280;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --ring:rgba(26,188,156,.35);
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
     a{color:inherit}
     .container{width:min(1100px,94%);margin:0 auto}
 
-    /* Header */
-    .site-header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand .logo{height:42px;width:auto}
-    .brand-text h1{margin:0;font-size:20px;letter-spacing:.2px}
-    .brand-text p{margin:2px 0 0;color:#c7d2fe;font-size:13px}
-    nav.primary a{color:#e5e7eb;text-decoration:none;margin:0 10px;font-weight:600}
+    .site-header{
+      background:var(--navy);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 2px 8px rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 0;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .brand .logo{
+      height:42px;
+      width:auto;
+    }
+
+    .brand-text h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:.2px;
+    }
+
+    .brand-text p{
+      margin:2px 0 0;
+      color:#c7d2fe;
+      font-size:13px;
+    }
+
+    nav.primary a{
+      color:#e5e7eb;
+      text-decoration:none;
+      margin:0 8px;
+      font-weight:600;
+      font-size:15px;
+    }
+
     nav.primary a:hover{color:#fff}
-    .top-actions .btn{margin-left:8px}
 
-    /* Buttons */
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-    .btn-primary{background:var(--teal);color:#022;border:1px solid transparent}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    .btn-primary{
+      background:var(--teal);
+      color:#022;
+      border:1px solid transparent;
+    }
+
     .btn-primary:hover{filter:brightness(1.05)}
-    .btn-outline{border:1.5px solid #cbd5e1;color:#fff}
+
+    .btn-outline{
+      border:1.5px solid #cbd5e1;
+      color:#fff;
+      background:transparent;
+    }
+
     .btn-outline:hover{background:rgba(255,255,255,.08)}
-    .btn-ghost{color:#fff;border:1.5px solid transparent}
-    .btn-light{background:#fff;color:var(--navy)}
 
-    /* Hero */
-    .hero{background:#0A1F44;color:#fff;position:relative}
-    .hero .hero-inner{position:relative;padding:72px 0}
-    .hero h2{font-size:34px;line-height:1.2;margin:0 0 10px}
-    .hero p{max-width:760px;color:#e5e7eb}
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn-ghost{
+      color:#fff;
+      border:1.5px solid transparent;
+    }
 
-    /* Sections */
-    .section{padding:56px 0}
-    .section-title{font-size:22px;margin:0 0 18px;color:var(--navy)}
+    .btn-light{
+      background:#fff;
+      color:var(--navy);
+    }
+
+    .hero{
+      background:
+        linear-gradient(rgba(10,31,68,.92), rgba(10,31,68,.92)),
+        url('assets/cover.jpg') center/cover no-repeat;
+      color:#fff;
+    }
+
+    .hero-inner{
+      padding:76px 0;
+    }
+
+    .hero h2{
+      font-size:38px;
+      line-height:1.15;
+      margin:14px 0 12px;
+      max-width:850px;
+    }
+
+    .hero p{
+      max-width:790px;
+      color:#e5e7eb;
+      font-size:18px;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:22px;
+    }
+
+    .pill{
+      display:inline-block;
+      background:#eef2ff;
+      color:#334155;
+      padding:5px 11px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      margin-right:6px;
+    }
+
+    .hero .pill{
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .section{
+      padding:56px 0;
+    }
+
+    .section-title{
+      font-size:24px;
+      margin:0 0 12px;
+      color:var(--navy);
+    }
+
+    .section-intro{
+      margin:0 0 22px;
+      max-width:780px;
+      color:var(--muted);
+    }
+
     .muted{color:var(--muted)}
 
-    /* Cards */
-    .grid{display:grid;gap:18px}
-    .cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:14px;padding:18px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
-    .card .icon{color:var(--teal);margin-bottom:8px}
+    .grid{
+      display:grid;
+      gap:18px;
+    }
 
-    /* Banner */
-    .banner{background:var(--navy);color:#fff}
-    .banner-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+    .cards{
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
 
-    /* Checklist */
-    .checklist{padding-left:18px;margin:0}
-    .checklist li{margin:8px 0}
+    .card{
+      background:var(--card);
+      border:1px solid #e5e7eb;
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 3px 10px rgba(0,0,0,.04);
+    }
 
-    /* Contact */
-    .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
-    .contact-form{background:#fff;border:1px solid #e5e7eb;padding:16px;border-radius:12px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px 12px;margin:8px 0 10px;border:1px solid #d1d5db;border-radius:10px;outline:none}
-    .contact-form input:focus,.contact-form textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--ring)}
-    .form-note{font-size:13px;color:var(--muted)}
+    .card h4{
+      margin:4px 0 8px;
+      color:var(--navy);
+      font-size:18px;
+    }
 
-    /* FAQ */
-    details{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
-    details+details{margin-top:10px}
-    summary{font-weight:700;color:var(--navy);cursor:pointer}
+    .card p{
+      margin:8px 0;
+    }
 
-    /* Footer */
-    .site-footer{background:#0f213f;color:#cbd5e1;padding:18px 0;text-align:center;margin-top:32px}
+    .card .icon{
+      color:var(--teal);
+      margin-bottom:8px;
+      font-size:22px;
+    }
 
-    /* Badges/rows */
-    .pill{display:inline-block;background:#eef2ff;color:#334155;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-right:6px}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .price{
+      font-size:22px;
+      font-weight:800;
+      color:var(--navy);
+      margin:10px 0;
+    }
+
+    .checklist{
+      padding-left:18px;
+      margin:0;
+    }
+
+    .checklist li{
+      margin:8px 0;
+    }
+
+    .highlight{
+      background:#ecfdf5;
+      border:1px solid #bbf7d0;
+    }
+
+    .banner{
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .banner-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:20px 0;
+    }
+
+    .process{
+      counter-reset:step;
+    }
+
+    .process .card h4::before{
+      counter-increment:step;
+      content:counter(step) ". ";
+      color:var(--teal);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:22px;
+    }
+
+    .contact-form{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      padding:16px;
+      border-radius:12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:10px 12px;
+      margin:8px 0 10px;
+      border:1px solid #d1d5db;
+      border-radius:10px;
+      outline:none;
+      font:inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus{
+      border-color:var(--teal);
+      box-shadow:0 0 0 3px var(--ring);
+    }
+
+    .form-note{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    details{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:14px;
+    }
+
+    details+details{
+      margin-top:10px;
+    }
+
+    summary{
+      font-weight:700;
+      color:var(--navy);
+      cursor:pointer;
+    }
+
+    .site-footer{
+      background:#0f213f;
+      color:#cbd5e1;
+      padding:18px 0;
+      text-align:center;
+      margin-top:32px;
+    }
 
     @media (max-width: 900px){
-      .contact-grid{grid-template-columns:1fr}
       nav.primary{display:none}
-      .hero .hero-inner{padding:52px 0}
-      .hero h2{font-size:28px}
-      .banner-inner{flex-direction:column;align-items:flex-start}
+      .contact-grid{grid-template-columns:1fr}
+      .hero-inner{padding:54px 0}
+      .hero h2{font-size:30px}
+      .hero p{font-size:16px}
+      .banner-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -112,169 +363,445 @@
         <img src="assets/logo.png" alt="DTech Support logo" class="logo" onerror="this.style.display='none'" />
         <div class="brand-text">
           <h1>DTech Support</h1>
-          <p>Local IT & Cybersecurity — Home + SME</p>
+          <p>Home Wi-Fi • IT Support • Cybersecurity</p>
         </div>
       </div>
+
       <nav class="primary" aria-label="Primary navigation">
-        <a href="#services-home">Home & Remote</a>
-        <a href="#services-sme">Business</a>
-        <a href="#industries">Industries</a>
+        <a href="#wifi">Wi-Fi</a>
+        <a href="#home-support">Home IT</a>
+        <a href="#business">Business</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <div class="top-actions">
         <a class="btn btn-outline" href="#contact">Book</a>
       </div>
     </div>
   </header>
 
-  <section class="hero" style="--bg:url('assets/cover.jpg')">
+  <section class="hero">
     <div class="container hero-inner">
-      <span class="pill">No ladders • Fast local help</span>
-      <h2>Quick, affordable IT help for homes & small businesses in East Cork</h2>
-      <p>Money‑first fixes we can do today: Wi‑Fi issues, slow PCs, antivirus/MFA, email & cloud, and backups. For SMEs: patching, security checks, and Microsoft 365/Google Workspace support.</p>
+      <span class="pill">Cork City & County</span>
+      <span class="pill">No ladders</span>
+      <span class="pill">Home & SME support</span>
+
+      <h2>Bad Wi-Fi upstairs? Buffering TV? Dropped Zoom calls?</h2>
+
+      <p>
+        DTech Support provides professional home Wi-Fi diagnostics and optimisation across Cork.
+        I test your Wi-Fi room by room, find the real cause of weak signal or dropouts, optimise your setup,
+        and give clear before-and-after results.
+      </p>
+
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contact" onclick="document.querySelector('#contact textarea').focus();">Book a call‑out</a>
-        <a class="btn btn-ghost" href="#pricing">See simple pricing</a>
+        <a class="btn btn-primary" href="#contact" onclick="document.querySelector('#contact textarea').focus();">
+          Book a Wi-Fi Health Check
+        </a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+
+      <div class="trust-row">
+        <span class="pill">Router setup</span>
+        <span class="pill">Mesh Wi-Fi</span>
+        <span class="pill">Home office</span>
+        <span class="pill">PC tune-ups</span>
+        <span class="pill">Security setup</span>
       </div>
     </div>
   </section>
 
-  <!-- HOME & REMOTE quick‑win services -->
-  <section id="services-home" class="section">
+  <section id="wifi" class="section">
     <div class="container">
-      <h3 class="section-title">Home & Remote — quick fixes that make a difference</h3>
+      <h3 class="section-title">Home Wi-Fi Optimisation</h3>
+      <p class="section-intro">
+        Most people waste money buying extenders without knowing the real issue.
+        I check signal, speed, placement, interference and router settings first — then recommend the right fix.
+      </p>
+
       <div class="grid cards">
-        <article class="card"><div class="icon">💡</div><h4>Wi‑Fi & Internet Fix</h4><p>Diagnose slow speeds, secure your router, set up mesh/extenders you already have. No ceiling installs.</p></article>
-        <article class="card"><div class="icon">🖥️</div><h4>Speed Up a Slow PC</h4><p>Clean up, update Windows, remove junk/old AV, optimise startup. Feels like a new machine.</p></article>
-        <article class="card"><div class="icon">🛡️</div><h4>Security Setup</h4><p>Install antivirus/XDR, enable firewall, set up password manager & 2FA. Simple, safe defaults.</p></article>
-        <article class="card"><div class="icon">📧</div><h4>Email & Cloud Help</h4><p>Outlook/Gmail fixes, calendar/contacts sync, Microsoft 365 / Google Workspace accounts.</p></article>
-        <article class="card"><div class="icon">💾</div><h4>Backup That Works</h4><p>Automated OneDrive/Google Drive backups or local USB/NAS with a test restore.</p></article>
-        <article class="card"><div class="icon">🧰</div><h4>Remote Support</h4><p>Many issues fixed in 15–30 minutes via secure remote session — no visit needed.</p></article>
+        <article class="card">
+          <div class="icon">📶</div>
+          <h4>Wi-Fi Health Check</h4>
+          <p class="muted">Best for weak signal, buffering, dropouts or dead zones.</p>
+          <p class="price">From €79</p>
+          <ul class="checklist">
+            <li>Room-by-room Wi-Fi testing</li>
+            <li>Speed, signal and interference checks</li>
+            <li>Router placement review</li>
+            <li>Check existing extenders/mesh</li>
+            <li>Clear recommendations before you buy anything</li>
+          </ul>
+        </article>
+
+        <article class="card highlight">
+          <div class="icon">🛠️</div>
+          <h4>Wi-Fi Optimisation Visit</h4>
+          <p class="muted">Best when you want the issue fixed there and then.</p>
+          <p class="price">From €149</p>
+          <ul class="checklist">
+            <li>Everything in the Health Check</li>
+            <li>Router and mesh settings tuned</li>
+            <li>Channel and band optimisation</li>
+            <li>Guest Wi-Fi setup if needed</li>
+            <li>Basic router security hardening</li>
+            <li>Before-and-after test results</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon">🏠</div>
+          <h4>Whole-Home Wi-Fi Upgrade</h4>
+          <p class="muted">Best for larger homes, garden offices or poor coverage.</p>
+          <p class="price">Custom quote</p>
+          <ul class="checklist">
+            <li>Mesh/access point recommendation</li>
+            <li>Setup and configuration</li>
+            <li>Device reconnection support</li>
+            <li>Guest network/security setup</li>
+            <li>Optional ongoing support plan</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SME services (kept concise) -->
-  <section id="services-sme" class="section">
+  <section class="section process">
     <div class="container">
-      <h3 class="section-title">Small Business Support — reliable, secure, local</h3>
+      <h3 class="section-title">How the Wi-Fi service works</h3>
+      <p class="section-intro">
+        A simple, professional process — no guessing, no pointless extenders, and no technical waffle.
+      </p>
+
       <div class="grid cards">
-        <article class="card"><div class="icon">🧩</div><h4>Managed Device Care</h4><p>Updates, patching, antivirus, and quick help to keep staff productive.</p></article>
-        <article class="card"><div class="icon">🔐</div><h4>Cybersecurity Basics</h4><p>MFA, password policy, XDR/AV rollout, phishing awareness for teams.</p></article>
-        <article class="card"><div class="icon">🌐</div><h4>Network & VPN</h4><p>Router/VPN setup, guest Wi‑Fi, VLANs (desk‑level only), troubleshooting and firmware updates.</p></article>
-        <article class="card"><div class="icon">☁️</div><h4>Microsoft 365 / Google</h4><p>Setup, migration, mailbox/security hardening, backups for mail & files.</p></article>
-        <article class="card"><div class="icon">🧯</div><h4>Backup & Recovery</h4><p>Local + cloud backup plan with periodic test restores and written steps.</p></article>
-        <article class="card"><div class="icon">📝</div><h4>Quarterly Mini‑Audit</h4><p>Short on‑site review with traffic‑light report: updates, AV, MFA, backups, Wi‑Fi.</p></article>
+        <article class="card">
+          <h4>Assess</h4>
+          <p>I ask where the Wi-Fi fails, what devices are affected, and what setup you currently have.</p>
+        </article>
+
+        <article class="card">
+          <h4>Test</h4>
+          <p>I check signal, speed, latency and coverage around the home.</p>
+        </article>
+
+        <article class="card">
+          <h4>Diagnose</h4>
+          <p>I identify whether the problem is router placement, interference, weak hardware, broadband speed or bad setup.</p>
+        </article>
+
+        <article class="card">
+          <h4>Optimise</h4>
+          <p>I tune the settings, improve placement where possible, configure mesh/router options and secure the network.</p>
+        </article>
+
+        <article class="card">
+          <h4>Validate</h4>
+          <p>I retest after changes and explain the results clearly.</p>
+        </article>
+
+        <article class="card">
+          <h4>Support</h4>
+          <p>You can add ongoing home tech support for Wi-Fi, printers, email, devices and security checks.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Industries (examples for credibility) -->
+  <section id="home-support" class="section">
+    <div class="container">
+      <h3 class="section-title">Home & Remote IT Support</h3>
+      <p class="section-intro">
+        Practical help for common home tech problems — either on-site in Cork or remotely where possible.
+      </p>
+
+      <div class="grid cards">
+        <article class="card">
+          <div class="icon">🖥️</div>
+          <h4>Speed Up a Slow PC</h4>
+          <p>Windows updates, startup optimisation, junk cleanup, old antivirus removal and general performance checks.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h4>Security Setup</h4>
+          <p>Antivirus, firewall checks, password manager advice, multi-factor authentication and safer defaults.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📧</div>
+          <h4>Email & Cloud Help</h4>
+          <p>Outlook, Gmail, Microsoft 365, Google Workspace, calendar sync, account setup and cloud file issues.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">💾</div>
+          <h4>Backup That Works</h4>
+          <p>OneDrive, Google Drive, external drive or simple local backup setup with a test restore where possible.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🖨️</div>
+          <h4>Printer & Device Setup</h4>
+          <p>Printer connection issues, scanners, smart TVs, tablets, phones and home office devices.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧰</div>
+          <h4>Remote Support</h4>
+          <p>Many issues can be fixed through a secure remote session without needing a call-out.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="business" class="section">
+    <div class="container">
+      <h3 class="section-title">Small Business Support</h3>
+      <p class="section-intro">
+        Local, practical IT support for small businesses that need reliable devices, safer accounts and fewer tech interruptions.
+      </p>
+
+      <div class="grid cards">
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h4>Managed Device Care</h4>
+          <p>Updates, patching, antivirus and quick troubleshooting to keep staff productive.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔐</div>
+          <h4>Cybersecurity Basics</h4>
+          <p>MFA, password policy, antivirus/XDR rollout, phishing awareness and practical security checks.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🌐</div>
+          <h4>Network & VPN</h4>
+          <p>Router/VPN setup, guest Wi-Fi, desk-level network troubleshooting and firmware updates.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">☁️</div>
+          <h4>Microsoft 365 / Google Workspace</h4>
+          <p>Mailbox setup, user accounts, basic security hardening, file sharing and cloud support.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧯</div>
+          <h4>Backup & Recovery</h4>
+          <p>Simple local and cloud backup plans with clear restore steps.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📝</div>
+          <h4>Quarterly Mini-Audit</h4>
+          <p>A short review covering updates, antivirus, MFA, backups, Wi-Fi and key risks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="industries" class="section">
     <div class="container">
       <h3 class="section-title">Industries we help</h3>
+
       <div class="grid cards">
-        <article class="card"><h4>Hair Salon / Barber</h4><p>Wi‑Fi fixes, POS & printer issues, booking software help, card reader pairing, antivirus.</p></article>
-        <article class="card"><h4>Pharmacy / Clinic</h4><p>Printer/label setup, secure backups, antivirus, VPN for owner, staff security basics.</p></article>
-        <article class="card"><h4>Retail / Clothing</h4><p>POS connectivity, barcode/receipt printers, Wi‑Fi reliability, updates & antivirus.</p></article>
-        <article class="card"><h4>Gym / Studio</h4><p>Check‑in/booking systems, Wi‑Fi, email accounts, reception PC security.</p></article>
-        <article class="card"><h4>B&B / Small Hotel</h4><p>Guest/staff Wi‑Fi segregation, front‑desk printer/email fixes, backup of bookings.</p></article>
+        <article class="card">
+          <h4>Hair Salon / Barber</h4>
+          <p>Wi-Fi fixes, POS issues, booking software help, printer setup and basic security.</p>
+        </article>
+
+        <article class="card">
+          <h4>Retail / Clothing</h4>
+          <p>POS connectivity, receipt printers, staff PCs, Wi-Fi reliability, updates and antivirus.</p>
+        </article>
+
+        <article class="card">
+          <h4>Clinic / Pharmacy</h4>
+          <p>Printer setup, secure backups, antivirus, MFA and desk-level troubleshooting.</p>
+        </article>
+
+        <article class="card">
+          <h4>Gym / Studio</h4>
+          <p>Booking systems, check-in devices, reception PC support, Wi-Fi and email help.</p>
+        </article>
+
+        <article class="card">
+          <h4>B&B / Small Hotel</h4>
+          <p>Guest Wi-Fi, staff Wi-Fi, email support, front desk devices and booking backup checks.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Simple pricing (starter) -->
   <section id="pricing" class="section">
     <div class="container">
       <h3 class="section-title">Simple pricing</h3>
+      <p class="section-intro">
+        Clear starting prices. Final pricing depends on the issue, travel, hardware required and scope agreed before work starts.
+      </p>
+
       <div class="grid cards">
-        <article class="card"><h4>Remote Quick Fix</h4><p class="muted">Most issues in 15–30 min</p><p><strong>€25–€35</strong></p><p>Secure remote session. If not fixed, we’ll advise next steps.</p></article>
-        <article class="card"><h4>Home Call‑Out</h4><p class="muted">Wi‑Fi, PC speed, email, backups</p><p><strong>€60–€100</strong></p><p>Transparent pricing before we start. No ladders.</p></article>
-        <article class="card"><h4>SME Visit</h4><p class="muted">Device help, security basics</p><p><strong>€80–€150</strong></p><p>Includes short written notes with next steps.</p></article>
+        <article class="card">
+          <h4>Remote Quick Fix</h4>
+          <p class="muted">Most issues in 15–30 minutes</p>
+          <p class="price">€25–€35</p>
+          <p>Secure remote session for email, software, settings and general troubleshooting.</p>
+        </article>
+
+        <article class="card highlight">
+          <h4>Wi-Fi Health Check</h4>
+          <p class="muted">Room-by-room Wi-Fi diagnostics</p>
+          <p class="price">From €79</p>
+          <p>Best first step before buying mesh systems, extenders or new routers.</p>
+        </article>
+
+        <article class="card">
+          <h4>Wi-Fi Optimisation Visit</h4>
+          <p class="muted">Testing, tuning and setup</p>
+          <p class="price">From €149</p>
+          <p>Includes diagnosis, optimisation, basic security hardening and before/after results.</p>
+        </article>
+
+        <article class="card">
+          <h4>Home Call-Out</h4>
+          <p class="muted">PC, printer, email, backup and device help</p>
+          <p class="price">€60–€100</p>
+          <p>Transparent pricing before work starts. No ladders.</p>
+        </article>
+
+        <article class="card">
+          <h4>SME Visit</h4>
+          <p class="muted">Small business IT support</p>
+          <p class="price">€80–€150</p>
+          <p>Device support, security basics, Microsoft 365/Google Workspace and network troubleshooting.</p>
+        </article>
+
+        <article class="card">
+          <h4>Home Tech Support Plan</h4>
+          <p class="muted">Ongoing support for your home tech</p>
+          <p class="price">From €20/month</p>
+          <p>Remote help, annual Wi-Fi review, router/security checks and priority support.</p>
+        </article>
       </div>
-      <p class="muted" style="margin-top:10px">Need ongoing support? Ask about monthly Home Office Care or SME Starter plans.</p>
     </div>
   </section>
 
-  <!-- Offer banner -->
   <section class="banner">
     <div class="container banner-inner">
-      <strong>Intro offer:</strong> Free Cyber Health Check for the first 20 Cork SMEs. No obligation.
-      <a class="btn btn-light" href="#contact" onclick="document.querySelector('#contact textarea').focus();">Claim your slot</a>
+      <div>
+        <strong>Intro offer:</strong>
+        Free Cyber Health Check for the first 20 Cork SMEs. No obligation.
+      </div>
+      <a class="btn btn-light" href="#contact" onclick="document.querySelector('#contact textarea').focus();">
+        Claim your slot
+      </a>
     </div>
   </section>
 
-  <!-- About / Trust -->
   <section id="about" class="section">
     <div class="container">
       <h3 class="section-title">Why choose DTech Support</h3>
+
       <ul class="checklist">
-        <li>Local & responsive</li>
-        <li>Clear, non‑technical reports with prioritised actions</li>
-        <li>Affordable, fixed‑price options — no long contracts</li>
-        <li>Navy IT background + BSc in IT & Cybersecurity (in progress)</li>
-        <li>Certs: Cisco Intro to Cybersecurity, Fortinet Associate, Microsoft AZ‑900</li>
+        <li>Local Cork-based support for homes and small businesses</li>
+        <li>Wi-Fi issues tested properly — not just guessed with extenders</li>
+        <li>Clear, non-technical explanations and practical next steps</li>
+        <li>Affordable fixed-price options with no long contracts</li>
+        <li>No ladders — desk-level, router, device, printer and software support only</li>
+        <li>Navy IT background + BSc in IT & Cybersecurity in progress</li>
+        <li>Certs include Cisco Introduction to Cybersecurity, Fortinet cybersecurity training and Microsoft AZ-900</li>
       </ul>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section" aria-labelledby="faq-title">
     <div class="container">
       <h3 id="faq-title" class="section-title">FAQ</h3>
+
       <details>
-        <summary>Do you do ladder or ceiling installs?</summary>
-        <p>No — phase one is desk‑level work only (routers at desk height, software/configuration, printers, PCs, etc.).</p>
+        <summary>Do you install access points in ceilings or run cables through walls?</summary>
+        <p>No. DTech Support currently provides desk-level work only. I can still help with router setup, mesh placement, configuration and testing.</p>
       </details>
+
+      <details>
+        <summary>Should I buy a Wi-Fi extender before booking?</summary>
+        <p>No. It is usually better to test the actual issue first. Many homes need better placement, configuration or mesh rather than a cheap extender.</p>
+      </details>
+
+      <details>
+        <summary>Can you help with mesh Wi-Fi?</summary>
+        <p>Yes. I can help set up and optimise mesh systems such as TP-Link Deco, Eero, Google Nest Wi-Fi and similar systems.</p>
+      </details>
+
       <details>
         <summary>What areas do you cover?</summary>
-          <p>Cork City and county. Remote support available anywhere.</p>
+        <p>Cork City and County. Remote support is available anywhere.</p>
       </details>
+
+      <details>
+        <summary>Do you support small businesses?</summary>
+        <p>Yes. I help small businesses with Wi-Fi, devices, Microsoft 365, Google Workspace, security basics, backups and troubleshooting.</p>
+      </details>
+
       <details>
         <summary>How do I book?</summary>
-        <p>Use the contact form below, WhatsApp, or call. We’ll confirm a time and price before starting.</p>
+        <p>Use the contact form, WhatsApp, email or phone. I’ll confirm the issue, likely price and next steps before starting.</p>
       </details>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
       <h3 class="section-title">Get in touch</h3>
+
       <div class="contact-grid">
         <div>
           <p>Email: <a href="mailto:info@dtechsupport.ie">info@dtechsupport.ie</a></p>
           <p>Phone: <a href="tel:+353860788739">086 078 8739</a> · <a href="https://wa.me/353860788739" target="_blank" rel="noopener">WhatsApp</a></p>
-          <p>
-  Facebook:
-  <a href="https://www.facebook.com/profile.php?id=61582869171888" target="_blank" rel="noopener"
-     aria-label="DTech Support on Facebook">DTech Support on Facebook</a>
-  ·
-  Instagram:
-  <a href="https://www.instagram.com/dtechsupport.ie/" target="_blank" rel="noopener"
-     aria-label="DTech Support on Instagram">@dtechsupport.ie</a>
-</p>
 
+          <p>
+            Facebook:
+            <a href="https://www.facebook.com/profile.php?id=61582869171888" target="_blank" rel="noopener">
+              DTech Support on Facebook
+            </a>
+            <br>
+            Instagram:
+            <a href="https://www.instagram.com/dtechsupport.ie/" target="_blank" rel="noopener">
+              @dtechsupport.ie
+            </a>
+          </p>
 
           <p>Areas: Cork City and County</p>
-          <p class="muted">By contacting us you agree we can reply and store your message for customer service. We don’t sell data.</p>
+
+          <p class="muted">
+            By contacting DTech Support, you agree that we can reply and store your message for customer service.
+            We do not sell data.
+          </p>
         </div>
+
         <form class="contact-form" action="https://formsubmit.co/info@dtechsupport.ie" method="POST">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Your email" required>
-          <input type="text" name="phone" placeholder="Phone (optional)">
-          <textarea name="message" rows="4" placeholder="How can I help?" required></textarea>
+          <input type="text" name="phone" placeholder="Phone number optional">
 
-          <!-- FormSubmit options -->
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Example: Wi-Fi is weak upstairs / TV buffers / Zoom keeps dropping / need help with home office setup"
+            required></textarea>
+
           <input type="hidden" name="_subject" value="Website enquiry — DTech Support">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" style="display:none">
-          <!-- <input type="hidden" name="_next" value="https://dtechsupport.ie/#thanks"> -->
 
           <button class="btn btn-primary" type="submit">Send message</button>
-          <p class="form-note">Prefer email? <a href="mailto:info@dtechsupport.ie">info@dtechsupport.ie</a></p>
+
+          <p class="form-note">
+            Prefer email? <a href="mailto:info@dtechsupport.ie">info@dtechsupport.ie</a>
+          </p>
         </form>
       </div>
     </div>
@@ -287,11 +814,9 @@
   </footer>
 
   <script>
-    // Set current year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <!-- LocalBusiness JSON‑LD for richer Google results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -303,18 +828,37 @@
     "email": "info@dtechsupport.ie",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "East Cork",
+      "addressLocality": "Cork",
       "addressRegion": "Co. Cork",
       "addressCountry": "IE"
     },
     "areaServed": "Cork",
     "sameAs": [
-  "https://www.facebook.com/profile.php?id=61582869171888",
-  "https://www.instagram.com/dtechsupport.ie/"
-],
-
-    "description": "Quick, affordable IT help for homes and small businesses: Wi‑Fi fixes, PC tune‑ups, antivirus/MFA, email & cloud, backups, and SME support.",
-    "priceRange": "€€"
+      "https://www.facebook.com/profile.php?id=61582869171888",
+      "https://www.instagram.com/dtechsupport.ie/"
+    ],
+    "description": "Home Wi-Fi optimisation, IT support and cybersecurity basics for homes and small businesses across Cork.",
+    "priceRange": "€€",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Wi-Fi Health Check",
+        "priceCurrency": "EUR",
+        "price": "79"
+      },
+      {
+        "@type": "Offer",
+        "name": "Wi-Fi Optimisation Visit",
+        "priceCurrency": "EUR",
+        "price": "149"
+      },
+      {
+        "@type": "Offer",
+        "name": "Home Tech Support Plan",
+        "priceCurrency": "EUR",
+        "price": "20"
+      }
+    ]
   }
   </script>
 </body>
